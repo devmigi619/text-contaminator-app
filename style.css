@@ -156,3 +156,34 @@ hr {
   background-color: #ccc;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .text-transformer {
+    flex-direction: column;
+  }
+
+  .arrow-container {
+    display: none; /* 화살표 컨테이너를 모바일에서는 숨깁니다 */
+  }
+
+  .text-transformer__input-area,
+  .text-transformer__output-area {
+    width: 100%;
+    margin-bottom: 20px; /* 위아래 요소와의 간격을 추가 */
+  }
+
+  .modal-content {
+    width: 90%; /* 모달 너비를 화면에 맞춰 조정 */
+    margin: 10% auto;
+  }
+
+  .history-item {
+    flex-direction: column; /* 모바일 환경에서는 위아래로 표시 */
+  }
+
+  .history-original,
+  .history-transformed {
+    width: 100%; /* 모바일 환경에서는 너비를 100%로 조정 */
+    margin-bottom: 10px; /* 아이템 간 간격 */
+  }
+}
