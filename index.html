@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eBook Reader for ADHDer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <h2>Text Contaminator</h2>
+      <!-- 전체를 감싸는 새로운 div -->
+      <div class="text-transformer">
+        <div class="text-transformer__input-area">
+          <textarea
+            id="textInput"
+            class="text-transformer__textarea"
+            placeholder="input text here..."
+          ></textarea>
+        </div>
+        <div class="arrow-container">→</div>
+        <div class="text-transformer__output-area">
+          <div id="transformedText" class="text-transformer__result"></div>
+        </div>
+      </div>
+      <div class="slider-container">
+        <label for="transformFrequency">Frequency</label>
+        <input
+          type="range"
+          id="transformFrequency"
+          min="0"
+          max="100"
+          value="50"
+        />
+        <span id="frequencyValue"></span>
+      </div>
+      <div class="buttons-container">
+        <!-- 버튼들을 위한 새로운 컨테이너 -->
+        <button id="transformBtn" class="action-button">Contaminate</button>
+        <button id="historyBtn" class="action-button">History</button>
+      </div>
+      <div id="historyModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>History</h2>
+          <div id="historyContent"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
